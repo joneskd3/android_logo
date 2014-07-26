@@ -1,0 +1,96 @@
+
+
+div div { /*selects all div within div */
+  background-color: #A4CA39;
+  position: relative; /*allows positioning of divs, but doesn't remove from code flow like absolute*/
+}
+.android{
+  height: 440px; width: 220px;
+  margin: auto; /*100px top/bottom margin; auto margin sets equal margin on right/left sides of element, centering it */
+}
+.head{
+  top: 100px;
+  width: 220px;
+  height: 100px;
+  border-radius: 110px 110px 0 0;
+}
+.body{
+  width:220px; height:184px;
+  top:110px;
+}
+
+.l_eye, .r_eye{
+  background-color:white;
+  width: 20px; height: 20px;
+  border-radius: 10px;
+  position: absolute; /*makes is so that eyes don't stack - still contains within parent div because relative*/
+  top:42px;
+}
+
+.l_eye{
+  left:50px;
+}
+.r_eye{
+  right:50px;
+}
+.l_ant, .r_ant{
+  width:6px; height:50px;
+  border-radius:3px;
+  position:absolute; /*places above parent element - head, and allows both to stack*/
+  top: -34px;
+}
+.l_ant{
+  left:50px;
+  -webkit-transform: rotate(-30deg);
+}
+.r_ant{
+  right:50px;
+  -webkit-transform: rotate(30deg);
+}
+
+.l_arm,.r_arm,.l_leg,.r_leg{
+  width: 50px;
+  position: absolute;
+}
+.l_arm, .r_arm{
+  border-radius:25px;
+  height:150px;
+}
+.l_leg,.r_leg{
+  height:80px;
+  top:182px;
+  border-radius: 0 0 25px 25px;
+}
+
+.l_arm {left: -58px;}
+.r_arm {right: -58px;}
+.l_leg {left: 45px;}
+.r_leg {right: 45px;}
+
+.gday{
+  visibility:hidden;
+}
+
+.head:hover {
+	-webkit-transform: rotate(-5deg) translate(-4px, -8px);
+	-transform: rotate(-5deg) translate(-4px, -8px);
+	-moz-transform: rotate(-5deg) translate(-4px, -8px);
+}
+.l_arm:hover{
+	-webkit-transform: rotate(15deg) translate(-14px, 0);
+	-transform: rotate(15deg) translate(-14px, 0);
+	-moz-transform: rotate(15deg) translate(-14px, 0);
+}
+.r_arm:hover{
+	-webkit-transform: rotate(-30deg) translate(30px, 0);
+	-transform: rotate(-30deg) translate(30px, 0);
+	-moz-transform: rotate(-30deg) translate(30px, 0);
+}
+.head:hover .gday{
+  visibility:visible;
+  background-color: transparent;
+  position:absolute;
+  right:-110px;
+  top: 90px;
+  font-size:30px;
+}
